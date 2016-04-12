@@ -30,8 +30,8 @@ set(EXECUTABLE_OUTPUT_PATH ${SONAR_VISION_BIN_DIR})
 #include_directories(${OpenCV_INCLUDE_DIRS} /home/syllogismrxs/builds/image-processing/bvtsdk/include)
 include_directories(${OpenCV_INCLUDE_DIRS} ${SONAR_API}/include)
 
-add_executable (sonar_opencv opencv.cpp my_ptsetreg.cpp my_five-point.cpp RANSAC.cpp)
+add_executable (SonarVO sonarVO.cpp my_ptsetreg.cpp my_five-point.cpp RANSAC.cpp)
 
 #target_link_libraries(sonar_opencv ${OpenCV_LIBS} /home/syllogismrxs/builds/image-processing/bvtsdk/lib/libbvtsdk.so)
-target_link_libraries(sonar_opencv ${OpenCV_LIBS} ${SONAR_API}/lib/libbvtsdk.so)
+target_link_libraries(SonarVO ${OpenCV_LIBS} ${SONAR_API}/lib/libbvtsdk.so)
 
